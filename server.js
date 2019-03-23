@@ -31,6 +31,8 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to BookStore application."});
 });
 
+require('./app/routers/book')(app);
+
 // listen for requests
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
