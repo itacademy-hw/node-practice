@@ -10,4 +10,20 @@ module.exports = (app) => {
      * Get all books
      */
     app.get('/books', bookController.findAll);
+
+    /**
+     * Get by id
+     */
+    app.get('/book/:bookId', bookController.findOne);
+
+    /**
+     * Update Book
+     */
+    app.put('/book/:bookId', bookController.update);
+
+    /**
+     * Delete book
+     */
+    app.delete('/book/:bookId', bookController.delete);
+
 };
